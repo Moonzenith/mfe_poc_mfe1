@@ -5,12 +5,9 @@ const {
 
 module.exports = withModuleFederationPlugin({
   name: "mfe1",
-
   exposes: {
-    // "./Component": "./src/app/app.component.ts",
-    "./Module": "./src/app/flights/flights.module.ts",
+    "./Shop": "./src/app/shop/shop.module.ts",
   },
-
   shared: share({
     "@angular/core": {
       singleton: true,

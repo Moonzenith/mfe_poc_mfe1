@@ -1,0 +1,30 @@
+<div class="form-container">
+  <h1>{{this.title}}</h1>
+  <form class="outter-form" id="shopForm"  (ngSubmit)="submit($event)">
+    <!-- TODO: Hide this if already known by parent!! -->
+    <div class="form-section" id="shopInfo" *ngIf="!this.disableShopInfo">
+      <label for="shopName">Shop Name</label>
+      <input type="text" id="shopName" [(ngModel)]="this.form.shopName" name="shopName" >
+      <label for="shopId">Shop Id</label>
+      <input type="text" id="shopId" [(ngModel)]="this.form.shopId" name="shopId">
+      <label for="shopAddress">Shop Address</label>
+      <input type="text" id="shopAddress" [(ngModel)]="this.form.shopAddress" name="shopAddress">
+      <label for="shopPhone">Shop Phone</label>
+      <input type="text" id="shopPhone" [(ngModel)]="this.form.shopPhone" name="shopPhone">
+    </div>
+
+    <div class="form-section" id="clientInfo">
+      <label for="clientName">Client Name</label>
+      <input type="text" id="clientName" [(ngModel)]="this.form.clientName" name="clientName">
+      <label for="clientId">Client ID</label>
+      <input type="text" id="clientId" [(ngModel)]="this.form.clientId" name="clientId">
+      <label for="clientAddress">Client Address</label>
+      <input type="text" id="clientAddress" [(ngModel)]="this.form.clientAddress" name="clientAddress">
+      <label for="clientPhone">Client Phone</label>
+      <input type="text" id="clientPhone" [(ngModel)]="this.form.clientPhone" name="clientPhone">
+    </div>
+  </form>
+  <div class="form-footer">
+    <button type="submit" form="shopForm">Submit</button>
+  </div>
+</div>
